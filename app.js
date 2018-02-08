@@ -10,6 +10,12 @@ console.log(puzArr)
 7 = 2,0
 8 = 2,1
 0 = 2,2
+function isMovable(row,column) {
+	console.log(puzArr[row-1][column]) //up 
+	console.log(puzArr[row][column+1]) // right
+	console.log(puzArr[row+1][column]) // down
+	console.log(puzArr[row][column-1]) // left
+}
 
 5 = 1,1
 up = [0][1] = i-1, i
