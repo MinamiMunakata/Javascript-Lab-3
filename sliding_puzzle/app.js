@@ -1,3 +1,18 @@
+//--------開始時間
+// var st = true;
+function startTime() {
+	// if (st) {
+	    var date = new Date();
+	    var x = document.getElementById("start_time");
+	    var h = addZero(date.getHours());
+	    var m = addZero(date.getMinutes());
+	    var s = addZero(date.getSeconds());
+	    x.innerHTML = "Start Time: " + h + ":" + m + ":" + s;	
+	// }
+	// st = false;	
+
+}
+
 var puzArr = [[1,2,3],[4,5,6],[7,8,0]];
 
 
@@ -35,12 +50,22 @@ function move(number){
 		document.getElementById("move_count").innerHTML = "Moves: " + count; // -- Done!!
 		console.log(puzArr);
 		console.log(count)
+		// //---------------HTML を書き換える？？
+		// var list = document.getElementById(idName).innerHTML
+		// console.log(list)
+		// var idName = "tile" + number;
+		// console.log(idName)
+		// document.getElementById(idName).innerHTML = "0";
+  //   	document.getElementById(idName).id = "hidden";
+  //   	document.getElementById("hidden").innerHTML = number;
+  //   	document.getElementById("hidden").id = idName;
+  //   	console.log(idName)
 
 	}
 };
 
 
- // numberの座標を取る method
+// numberの座標を取る method
 // function getRowColumn(number) {
 // 	if (number <= 3) {
 // 		obj.row = 0
@@ -59,9 +84,6 @@ function move(number){
 // 	console.log(obj)
 // }
 
- //　とった座標をisMovableで取得する
- // isMovable trueのとき入れ替える swap
- // how to animate?
 
 
 function isMovable(row,column) {
@@ -112,14 +134,6 @@ function addZero(i) {
     return i;
 }
 
-function startTime() {
-    var date = new Date();
-    var x = document.getElementById("start_time");
-    var h = addZero(date.getHours());
-    var m = addZero(date.getMinutes());
-    var s = addZero(date.getSeconds());
-    x.innerHTML = "Start Time: " + h + ":" + m + ":" + s;
-}
 
 
 // how to get it only for the first time 
