@@ -4,6 +4,7 @@
 	<title>Sliding Puzzle</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Playball" rel="stylesheet">
 	<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
 </head>
@@ -12,7 +13,8 @@
 	<h1>Sliding Puzzle</h1>
 	<div class="container">
 		<div class="puzzles">
-			<ul id="tiles" onClick="startTime()">
+			<p id="great"></p>
+			<ul id="tiles">
 				<li class="tile" id="tile1" onClick="move(1)" onmouseover="mouseOver(1)"  onmouseout="moveOut(1)">1</li>
 				<li class="tile" id="tile2" onClick="move(2)" onmouseover="mouseOver(2)" onmouseout="moveOut(2)">2</li>
 				<li class="tile" id="tile3" onClick="move(3)" onmouseover="mouseOver(3)" onmouseout="moveOut(3)">3</li>
