@@ -3,7 +3,6 @@ var doneArr = [1,2,3,4,5,6,7,8,0];
 var zero = {};
 var count = 0
 
-// startGame()
 window.onload = function(){
     startGame();
 }
@@ -48,16 +47,6 @@ function closeGame() {
 	$('#great').html("Great!!");
 }
 
-
-// --------らんだむ
-// すたーと
-// カウント
-// リスタートでリセットされるもの
-
-// クリア判定
-// Click event "" 書き換える
-
-
 function upDateDisplay() {
     var $tiles = $("#tiles")
     var inputToUl = ""
@@ -72,7 +61,7 @@ function upDateDisplay() {
     $tiles.html(inputToUl)
 }
 
-//---------------------------
+//---- get time ----
 function addZero(i) {
     if (i < 10) {
         i = "0" + i;
@@ -95,8 +84,7 @@ function endTime() {
     var s = addZero(date.getSeconds());
     x.html("End Time: " + h + ":" + m + ":" + s);
 }
-
-//-------------------------------
+//------------------
 
 function getTileOrderAsArray() {
 	var tileOrder = [];
@@ -109,8 +97,6 @@ function getTileOrderAsArray() {
 	return tileOrder;
 }
 
-
-//---------------
 function printMove() {
 	if (isDone()) {
 		$('#move_count').html('Moves: ' + count + ' --- Done!!!');  	
@@ -118,6 +104,7 @@ function printMove() {
     	$('#move_count').html('Moves: ' + count);
     }
 }
+
 function move(number){
 	var obj = getPoint(number)
 
@@ -146,7 +133,6 @@ function isMovableUp(row,column){
 	}
 }
 
-
 function isMovableRight(row,column){
 	if (column < 2 && !puzArr[row][column +1]) {
 		zero.row = row;
@@ -170,35 +156,29 @@ function isMovableLeft(row,column){
 		return true;
 	}	
 }
-//-----------------------
 
 function getPoint(number){
 	var row;
 	var column;
-	var tileOrder = getTileOrderAsArray()
-	var indexOfTileOder = tileOrder.indexOf(number)
+	var tileOrder = getTileOrderAsArray();
+	var indexOfTileOder = tileOrder.indexOf(number);
 
 	if (indexOfTileOder < 3) {
-		row = 0
+		row = 0;
 	} else if (indexOfTileOder >=3 && indexOfTileOder < 6) {
-		row = 1
+		row = 1;
 	} else {
-		row = 2
+		row = 2;
 	}
 	if (indexOfTileOder == 0 || indexOfTileOder%3 == 0 ) {
-		column = 0
+		column = 0;
 	} else if ((indexOfTileOder+2)%3 == 0) {
-		column = 1
+		column = 1;
 	} else {
-		column = 2
+		column = 2;
 	}
-	return {"row": row, "column": column}
+	return {"row": row, "column": column};
 }
-
-
-//---------------
-
-
 
 function mouseOver(number){
 	var obj = getPoint(number)
@@ -213,5 +193,4 @@ function mouseOver(number){
 function moveOut(number) {
 		var idName = "tile" + number;
 	    document.getElementById(idName).style.backgroundColor = "";
-}
-
+};

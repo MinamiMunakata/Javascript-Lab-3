@@ -3,7 +3,6 @@ body, div, ul, ol, li, p, a, span { /*reset css*/
 	padding: 0;
 }
 
-
 h1 {
 	text-align: center;
 }
@@ -21,19 +20,13 @@ h1 {
     color: chartreuse;
 }
 
-.container {
-	
-}
-
 .puzzles {
 	margin: 0 auto;
 	width: 500px;
 }
 
-
 ul {
 	list-style-type: none;
-
 }
 
 li {
@@ -45,9 +38,7 @@ li {
     margin-bottom: 5px;
     text-align: center;
     vertical-align: middle;
-
 }
-
 
 #hidden {
 	visibility: hidden;
@@ -57,4 +48,3 @@ li {
 	width: 500px;
     margin: 0 auto;
 }
-
